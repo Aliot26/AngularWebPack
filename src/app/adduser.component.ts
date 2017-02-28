@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {UsersService} from './users.service';
 import {Users} from './users';
 
@@ -27,14 +27,17 @@ import {Users} from './users';
 })
 export class AdduserComponent implements OnInit {
 
-    items: Users[] = [];
-    constructor(private usersService: UsersService){}
+    items:Users[] = [];
 
-    addUser(name: string, age: number){
+    constructor(private usersService:UsersService) {
+    }
+
+    addUser(name:string, age:number) {
 
         this.usersService.addUser(name, age);
     }
-    ngOnInit(){
+
+    ngOnInit() {
         this.items = this.usersService.getUsers();
     }
 }

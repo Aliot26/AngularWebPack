@@ -25,6 +25,7 @@ import {Users} from './users';
 export class GetusersComponent implements OnInit {
 
     items:Users[] = [];
+
     constructor(private usersService:UsersService) {
     }
 
